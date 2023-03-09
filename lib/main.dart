@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_plant/constants.dart';
+import 'package:flutter_plant/screens/home/home_screen.dart';
 
 void main() {
   runApp(const App());
@@ -24,15 +26,15 @@ class App extends StatelessWidget {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Plant App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello World'),
+        scaffoldBackgroundColor: kBackgroundColor,
+        colorScheme: const ColorScheme.light(
+          primary: kPrimaryColor,
         ),
       ),
+      home: const HomeScreen(),
     );
   }
 }
