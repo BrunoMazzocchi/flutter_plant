@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../constants.dart';
 import 'featured_plant_card.dart';
 
 class FeaturedPlants extends StatelessWidget {
@@ -8,6 +9,7 @@ class FeaturedPlants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      padding: const EdgeInsets.only(right: kDefaultPadding),
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
